@@ -1,5 +1,5 @@
 // Fichier JavaScript principal pour le site Charlotte®
-// Ajoutez ici vos scripts personnalisés.
+// Inspiré du style Mapbox — animations scroll reveal
 
 // ── Dark Mode ──
 (function initTheme() {
@@ -22,9 +22,56 @@ function setupThemeToggle() {
   });
 }
 
+// ── Scroll Reveal (Intersection Observer) ──
+function setupScrollReveal() {
+  const reveals = document.querySelectorAll('.reveal, .reveal-children');
+  if (!reveals.length) return;
+
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target); // ne déclencher qu'une fois
+      }
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: '0px 0px -40px 0px'
+  });
+
+  reveals.forEach(function(el) {
+    observer.observe(el);
+  });
+}
+
+// ── Smooth header shadow on scroll ──
+function setupHeaderScroll() {
+  const header = document.querySelector('.header');
+  if (!header) return;
+
+  let ticking = false;
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      window.requestAnimationFrame(function() {
+        if (window.scrollY > 10) {
+          header.style.boxShadow = '0 1px 12px rgba(0,0,0,0.06)';
+        } else {
+          header.style.boxShadow = 'none';
+        }
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   // Setup toggle pour les boutons déjà présents dans le DOM
   setupThemeToggle();
+  // Scroll reveal animations
+  setupScrollReveal();
+  // Header shadow on scroll
+  setupHeaderScroll();
   // Déterminer si on est dans /pages/ ou à la racine
   const isInPages = window.location.pathname.includes('/pages/');
   const headerPath = isInPages ? 'header.html' : 'header-root.html';
