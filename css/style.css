@@ -608,7 +608,7 @@ section {
 }
 
 .icon-grid {
-  background-image: url('../images/grid-icon.svg');
+  background-image: url('/images/grid-icon.svg');
 }
 
 .icon-rocket {
