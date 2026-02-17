@@ -11,10 +11,51 @@
 </head>
 <body>
   <div id="header-include"></div>
-  <main class="container page-content">
-    <h1>Contact</h1>
-    <p>Page en construction…</p>
-    </main>
+  <main class="page-content">
+
+    <!-- Formulaire de contact -->
+    <section class="contact-form-section">
+      <div class="container">
+        <form class="contact-form" action="#" method="post">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="jane@framer.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-dark btn-form">Nom, email, message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Parlons de vos besoins -->
+    <section class="contact-intro">
+      <div class="container">
+        <h2>Parlons de vos besoins.</h2>
+        <p>Construisons ensemble une formation adaptée à vos équipes et à vos enjeux. Chaque accompagnement commence par une écoute attentive de vos besoins, dans un esprit de bienveillance et de collaboration.</p>
+        <p>Contactez-moi pour toute question, pour demander un devis ou simplement échanger sur un projet. J'ai à cœur de vous apporter une réponse personnalisée, concrète et humaine.</p>
+      </div>
+    </section>
+
+    <!-- Coordonnées -->
+    <section class="contact-info">
+      <div class="container">
+        <h3>Coordonnées</h3>
+        <p class="contact-name">Charlotte Pagnoux</p>
+        <p class="contact-role">Psychologue – Formatrice</p>
+        <p class="contact-phone">Téléphone : <a href="tel:+33767678690">07 67 67 86 90</a></p>
+      </div>
+    </section>
+
+  </main>
   <div id="footer-include"></div>
     <script src="../js/main.js"></script>
 </body>

@@ -643,6 +643,148 @@ section {
   }
 }
 
+/* ── Contact Page ── */
+.contact-form-section {
+  padding: var(--spacing-2xl) 0;
+}
+
+.contact-form {
+  max-width: 520px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+@media (min-width: 640px) {
+  .form-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--spacing-md);
+}
+
+.form-row .form-group {
+  margin-bottom: 0;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+  font-family: inherit;
+  font-size: 0.9rem;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  background: var(--color-card-background);
+  color: var(--color-text-primary);
+  outline: none;
+  transition: box-shadow .2s;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  box-shadow: 0 0 0 2px var(--color-text-primary);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.btn-form {
+  width: 100%;
+  max-width: 520px;
+  margin-top: var(--spacing-xs);
+  padding: 14px 24px;
+  font-size: 0.95rem;
+  border-radius: 12px;
+}
+
+/* Parlons de vos besoins */
+.contact-intro {
+  padding: var(--spacing-2xl) 0;
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.contact-intro h2 {
+  font-size: clamp(1.1rem, 3vw, 1.3rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text-primary);
+  text-align: left;
+}
+
+.contact-intro p {
+  font-size: clamp(0.88rem, 2vw, 0.95rem);
+  color: var(--color-text-body);
+  line-height: 1.7;
+  max-width: 560px;
+  text-align: left;
+  margin-bottom: var(--spacing-sm);
+}
+
+.contact-intro p:last-child {
+  margin-bottom: 0;
+}
+
+/* Coordonnées */
+.contact-info {
+  padding: var(--spacing-2xl) 0;
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.contact-info h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text-primary);
+  text-align: left;
+}
+
+.contact-info p {
+  font-size: 0.9rem;
+  color: var(--color-text-body);
+  text-align: left;
+  margin-bottom: 6px;
+  line-height: 1.6;
+}
+
+.contact-info .contact-name {
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.contact-info a {
+  color: var(--color-text-body);
+  transition: color .2s;
+}
+
+.contact-info a:hover {
+  color: var(--color-hover-dark);
+}
+
 /* ── Responsive Typography ── */
 @media (max-width: 640px) {
   html {
