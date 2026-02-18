@@ -673,12 +673,12 @@ section {
   margin-bottom: var(--spacing-sm);
 }
 
-.legal-section a {
+.legal-section a:not(.btn) {
   text-decoration: underline;
   color: var(--color-text-primary);
 }
 
-.legal-section a:hover {
+.legal-section a:not(.btn):hover {
   color: var(--color-text-muted);
 }
 
@@ -686,6 +686,24 @@ section {
   .legal-section:first-child {
     padding-top: var(--spacing-3xl);
   }
+}
+
+/* ── About Page ── */
+.about-subtitle {
+  font-weight: 400;
+  color: var(--color-text-secondary);
+}
+
+.about-discover-label {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-xs);
+}
+
+.about-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
 }
 
 /* ── Formations Page ── */
