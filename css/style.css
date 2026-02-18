@@ -809,6 +809,50 @@ section {
   flex-direction: column;
 }
 
+.formation-attr-icon {
+  width: 28px;
+  height: 28px;
+  margin-bottom: var(--spacing-sm);
+  flex-shrink: 0;
+  background-color: var(--color-text-primary);
+  -webkit-mask-size: 28px 28px;
+  mask-size: 28px 28px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+.icon-target {
+  -webkit-mask-image: url('/images/target-icon.svg');
+  mask-image: url('/images/target-icon.svg');
+}
+
+.icon-alert {
+  -webkit-mask-image: url('/images/alert-icon.svg');
+  mask-image: url('/images/alert-icon.svg');
+}
+
+.icon-star {
+  -webkit-mask-image: url('/images/star-icon.svg');
+  mask-image: url('/images/star-icon.svg');
+}
+
+.icon-users {
+  -webkit-mask-image: url('/images/users-icon.svg');
+  mask-image: url('/images/users-icon.svg');
+}
+
+.icon-calendar {
+  -webkit-mask-image: url('/images/calendar-icon.svg');
+  mask-image: url('/images/calendar-icon.svg');
+}
+
+.icon-trend {
+  -webkit-mask-image: url('/images/trend-icon.svg');
+  mask-image: url('/images/trend-icon.svg');
+}
+
 .formation-attr strong {
   color: var(--color-text-primary);
   font-weight: 600;
